@@ -17,8 +17,17 @@ print(grid)
 
 while not pyray.window_should_close():
     pyray.begin_drawing()
-    pyray.clear_background(pyray.WHITE)
-    pyray.draw_text("Hello world", 190, 200, 20, pyray.VIOLET)
+
+    x = 0
+    y = 0
+
+    for j in range(N):
+        x = 0
+        for i in range(M):
+            pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.GRAY)
+            x += PARTICLE_SIZE
+        y += PARTICLE_SIZE
+
     pyray.end_drawing()
 
 pyray.close_window()
