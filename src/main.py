@@ -2,7 +2,7 @@ import random
 
 import pyray
 
-NUM_PARTICLES = 50
+NUM_PARTICLES = 5000
 
 WIDTH = 800
 HEIGHT = 400
@@ -26,6 +26,8 @@ for _ in range(NUM_PARTICLES):
 
 while not pyray.window_should_close():
     pyray.begin_drawing()
+
+    pyray.clear_background(pyray.BLACK)
 
     x = 0
     y = 0
