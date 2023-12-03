@@ -35,10 +35,13 @@ while not pyray.window_should_close():
     for j in range(N):
         x = 0
         for i in range(M):
-            if grid[i][j]:
-                pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.GRAY)
-            else:
-                pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.WHITE)
+            pyray.draw_rectangle(
+                x,
+                y,
+                PARTICLE_SIZE,
+                PARTICLE_SIZE,
+                pyray.Color(0, 115, 207, len(grid[i][j]) * 15 + 100),
+            )
             x += PARTICLE_SIZE
         y += PARTICLE_SIZE
 
