@@ -1,3 +1,5 @@
+import random
+
 import pyray
 
 
@@ -13,7 +15,12 @@ N = HEIGHT // PARTICLE_SIZE
 
 grid = [[[] for _ in range(N)] for _ in range(M)]
 
-print(grid)
+# print(grid)
+
+# add random particle
+random_i = random.randint(0, M - 1)
+random_j = random.randint(0, N - 1)
+grid[random_i][random_j].append(object())
 
 while not pyray.window_should_close():
     pyray.begin_drawing()
@@ -24,7 +31,10 @@ while not pyray.window_should_close():
     for j in range(N):
         x = 0
         for i in range(M):
-            pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.GRAY)
+            if grid[i][j]:
+                pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.GRAY)
+            else:
+                pyray.draw_rectangle(x, y, PARTICLE_SIZE, PARTICLE_SIZE, pyray.WHITE)
             x += PARTICLE_SIZE
         y += PARTICLE_SIZE
 
