@@ -1,6 +1,19 @@
 import pyray
 
-pyray.init_window(800, 450, "Hello")
+
+WIDTH = 800
+HEIGHT = 400
+
+pyray.init_window(WIDTH, HEIGHT, "Hello")
+
+PARTICLE_SIZE = 10
+
+M = WIDTH // PARTICLE_SIZE
+N = HEIGHT // PARTICLE_SIZE
+
+grid = [[[] for _ in range(N)] for _ in range(M)]
+
+print(grid)
 
 while not pyray.window_should_close():
     pyray.begin_drawing()
