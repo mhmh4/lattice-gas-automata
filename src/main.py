@@ -35,7 +35,7 @@ while not pyray.window_should_close():
                 y,
                 PARTICLE_SIZE,
                 PARTICLE_SIZE,
-                pyray.Color(0, 115, 207, len(grid[i][j]) * 10 + 100),
+                pyray.Color(0, 115, 207, min(len(grid[i][j]) * 10 + 100, 255)),
             )
             x += PARTICLE_SIZE
         y += PARTICLE_SIZE
