@@ -17,7 +17,7 @@ grid = [[[] for _ in range(N)] for _ in range(M)]
 for _ in range(NUM_PARTICLES):
     random_i = random.randint(0, M - 1)
     random_j = random.randint(0, N - 1)
-    grid[random_i][random_j].append(object())
+    grid[random_i][random_j].append(random.randint(1, 4))
 
 pyray.init_window(WIDTH, HEIGHT, "")
 
