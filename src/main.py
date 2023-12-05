@@ -23,10 +23,8 @@ pyray.init_window(WIDTH, HEIGHT, "")
 
 while not pyray.window_should_close():
     pyray.begin_drawing()
-
     pyray.clear_background(pyray.BLACK)
 
-    x = 0
     y = 0
 
     for j in range(N):
@@ -37,7 +35,7 @@ while not pyray.window_should_close():
                 y,
                 PARTICLE_SIZE,
                 PARTICLE_SIZE,
-                pyray.Color(0, 115, 207, len(grid[i][j]) * 15 + 100),
+                pyray.Color(0, 115, 207, len(grid[i][j]) * 10 + 100),
             )
             x += PARTICLE_SIZE
         y += PARTICLE_SIZE
